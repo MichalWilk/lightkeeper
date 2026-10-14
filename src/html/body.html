@@ -1,0 +1,89 @@
+
+<div id="stage">
+  <canvas id="game" aria-label="Lightkeeper game"></canvas>
+  <button class="hud-btn" id="pauseBtn" aria-label="Pause" hidden>II</button>
+  <p class="errnote" id="errNote" hidden></p>
+
+  <div id="title" class="overlay">
+    <div class="panel">
+      <div class="eyebrow" data-i="eyebrow">A game of one lamp</div>
+      <h1>Light<em>keeper</em></h1>
+      <p class="tag" data-i="tag">Ships that see your light find the harbor. Ships left in the dark find the rocks.</p>
+      <p class="how" id="howText"></p>
+      <div class="stats">
+        <div class="stat"><b id="bestTitle">0</b><span data-i="best">Best</span></div>
+        <div class="stat"><b id="bestNight">1</b><span data-i="bestNight">Longest watch</span></div>
+        <div class="stat"><b id="repTitle">0</b><span data-i="rep">Reputation</span></div>
+      </div>
+      <button class="btn" id="startBtn" data-i="start">Light the lamp</button>
+      <button class="btn" id="resumeRunBtn" hidden></button>
+      <div class="row">
+        <button class="ghost" id="fleetBtn" data-i="fleetBtn">The ships</button>
+        <button class="ghost" id="logBtn" data-i="logBtn">Keeper's log</button>
+        <button class="ghost" id="langBtn" aria-pressed="false">Polski</button>
+        <button class="ghost" id="soundBtn" aria-pressed="true" data-i="sound">Sound on</button>
+        <button class="ghost" id="fsBtn" data-i="fullscreen" hidden>Fullscreen</button>
+      </div>
+      <p class="build" id="buildStamp"></p>
+    </div>
+  </div>
+
+  <div id="dawn" class="overlay" hidden>
+    <div class="panel">
+      <div class="eyebrow" data-i="dawnEyebrow">Dawn</div>
+      <h2 data-i="dawn">Choose one improvement</h2>
+      <p class="how" data-i="dawnHow">Buy what the oil allows. Press 1 to 4 to buy, Enter to sail on.</p>
+      <div class="oil"><span id="oilNow">0</span><small data-i="oil">oil</small></div>
+      <div class="cards" id="cards"></div>
+      <p class="build" id="build"></p>
+      <button class="btn" id="contBtn" data-i="cont">Sail on</button>
+    </div>
+  </div>
+
+  <div id="fleet" class="overlay" hidden>
+    <div class="panel">
+      <div class="eyebrow" data-i="fleetEyebrow">The fleet</div>
+      <h2 data-i="fleetTitle">The ships of these waters</h2>
+      <div class="cards ships" id="fleetCards"></div>
+      <button class="btn" id="fleetClose" data-i="back">Back</button>
+    </div>
+  </div>
+
+  <div id="log" class="overlay" hidden>
+    <div class="panel">
+      <div class="eyebrow" data-i="logEyebrow">Keeper's log</div>
+      <h2 data-i="log">Lasting improvements</h2>
+      <p class="how" data-i="logHow">Bought with reputation, earned at the end of every watch. They stay with you.</p>
+      <div class="oil"><span id="repNow">0</span><small data-i="rep">Reputation</small></div>
+      <div class="cards" id="metaCards"></div>
+      <button class="btn" id="logClose" data-i="back">Back</button>
+    </div>
+  </div>
+
+  <div id="pause" class="overlay" hidden>
+    <div class="panel">
+      <h2 data-i="paused">Lamp held still</h2>
+      <p class="how" data-i="pauseHow">Press P or Esc to resume.</p>
+      <button class="btn" id="resumeBtn" data-i="resume">Resume</button>
+      <div class="row"><button class="ghost" id="quitBtn" data-i="quit">Abandon the watch</button></div>
+    </div>
+  </div>
+
+  <div id="over" class="overlay" hidden>
+    <div class="panel">
+      <div class="eyebrow" data-i="overEyebrow">Morning comes</div>
+      <h2 data-i="over">The lamp has gone out</h2>
+      <div class="stats">
+        <div class="stat"><b id="finalScore">0</b><span data-i="score">Score</span></div>
+        <div class="stat"><b id="finalSaved">0</b><span data-i="saved">Brought home</span></div>
+        <div class="stat"><b id="finalNight">1</b><span data-i="nights">Nights</span></div>
+        <div class="stat"><b id="finalRep">0</b><span data-i="repGain">Reputation earned</span></div>
+      </div>
+      <p class="build" id="finalBuild"></p>
+      <p class="how" id="overNote"></p>
+      <button class="btn" id="againBtn" data-i="again">Light it again</button>
+      <div class="row"><button class="ghost" id="logBtn2" data-i="logBtn">Keeper's log</button><button class="ghost" id="menuBtn" data-i="menu">Main menu</button></div>
+    </div>
+  </div>
+</div>
+
